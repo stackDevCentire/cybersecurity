@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+    <style type="text/css">
+        @charset "utf-8";
+      
+
+        * {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            background-color: #efefef;
+            font-family: "Arial", sans-serif;
+            letter-spacing: 1px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .main-image-circle {
+            background: url(your.png) center top no-repeat;
+            width: 33%;
+            margin: 85px auto 0;
+            height: 100%;
+        }
+
+        .rounded-circle-container {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .rounded-circle-container .level {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .corner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .middle-level {
+            padding: 75px 7% 0;
+        }
+
+        .rounded-circle-container .top-level {
+            margin: 20px auto 0;
+            padding: 0 3%;
+            width: 80%;
+        }
+
+        .w-sm {
+            flex-basis: 15%;
+            text-align: center;
+        }
+
+        .top-left-col,
+        .top-right-col {
+            margin-top: 82px;
+        }
+
+        .bottom-level {
+            padding: 60px 9% 0;
+            width: 92%;
+            margin: 0 auto;
+        }
+
+        .bottom-center-col {
+            margin-top: 110px;
+            position: relative;
+            z-index: 9;
+        }
+
+        .navigation-icon {
+            display: flex;
+            justify-content: space-between;
+            width: 89%;
+            transform: translateY(-2px);
+            -webkit-transform: translateY(-2px);
+            margin: 0 auto 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .circle-footer {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            transform: translateY(-123px);
+            -webkit-transform: translateY(-123px);
+            position: relative;
+            z-index: 1;
+        }
+
+        .animate {
+            perspective: 1000px;
+            position: relative;
+        }
+
+        .more-info {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+            top: 40px;
+            position: absolute;
+            transform: rotateY(-180deg);
+            -webkit-transform: rotateY(-180deg);
+        }
+
+        .animate .animate-flip {
+            transition: all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+            text-align: center;
+        }
+
+        .animate:hover .animate-flip {
+            transition: all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+            opacity: 0;
+        }
+
+        .animate:hover .more-info {
+            visibility: visible;
+            transition: all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+            transform: rotateY(0deg);
+            -webkit-transform: rotateY(0deg);
+            opacity: 1;
+        }
+
+        h2 {
+            color: #0062b1;
+            font-weight: bold;
+            font-size: 52px;
+            line-height: 75px;
+        }
+
+        .circle-footer p {
+            font-size: 28px;
+            font-weight: bold;
+            color: #0062b1;
+        }
+
+        .circle-footer p span {
+            color: #59a32a;
+        }
+
+        @media (min-width:1400px) {
+            .main-image-circle {
+                width: 33%;
+            }
+        }
+
+        @media (min-width:1280px) and (max-width:1370px) {
+            .main-image-circle {
+                width: 46%;
+            }
+        }
+
+        @media (min-width:900px) and (max-width:1024px) {
+            .main-image-circle {
+                width: 62%;
+            }
+        }
+
+        @media (min-width:768px) and (max-width:812px) {
+            .main-image-circle {
+                width: 82%;
+            }
+        }
+
+        @media (max-width:680px) {
+            .main-image-circle {
+                width: 90%;
+                background-size: contain;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .corner img {
+                display: none;
+            }
+
+            .rounded-circle-container .top-level {
+                padding: 0 0;
+                width: 100%;
+            }
+
+            .middle-level {
+                padding: 45px 0% 0;
+            }
+
+            .top-left-col,
+            .top-right-col {
+                margin-top: 54px;
+            }
+
+            .bottom-center-col {
+                margin-top: 76px;
+            }
+
+            .bottom-level {
+                padding: 30px 4% 0;
+                width: 100%;
+            }
+
+            .circle-footer {
+                transform: translateY(-41px);
+                -webkit-transform: translateY(-41px);
+            }
+
+            .navigation-icon {
+                width: 100%;
+                padding-left: 52px;
+                padding-right: 14px;
+                transform: translateY(6px);
+                -webkit-transform: translateY(6px);
+            }
+
+            .navigation-icon img {
+                width: 60%;
+            }
+
+            h2 {
+                font-size: 18px;
+                line-height: 32px;
+                margin-top: 15px;
+            }
+
+            .circle-footer p {
+                font-size: 13px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main-image-circle">
+        <div class="rounded-circle-container">
+            <div class="level top-level">
+                <a href="" class="corner top-left-col w-sm animate">
+                    <div class="animate-flip">
+                        <img src="human.png" alt="">
+                        <p>Human Firewalls</p>
+                    </div>
+                    <p class="more-info">more info</p>
+                </a>
+                <a href="" class="corner top-center-col animate">
+                    <div class="animate-flip">
+                        <img src="fire.png" alt="">
+                        <p>Firwall Protection</p>
+                    </div>
+                    <p class="more-info">more info</p>
+                </a>
+                <a href="" class="corner top-right-col w-sm animate">
+                    <div class="animate-flip">
+                        <img src="email.png" alt="">
+                        <p>Email Protection</p>
+                    </div>
+                    <p class="more-info">more info</p>
+                </a>
+            </div>
+            <div class="level middle-level">
+                <a href="" class="corner top-middle-col w-sm animate">
+                    <div class="animate-flip">
+                        <img src="backup.png" alt="">
+                        <p>Backup Recovery</p>
+                    </div>
+                    <p class="more-info">more info</p>
+                </a>
+                <a href="" class="corner top-middle-col w-sm animate">
+                    <div class="animate-flip">
+                        <img src="training.png" alt="">
+                        <p>Training</p>
+                    </div>
+                    <p class="more-info">more info</p>
+                </a>
+            </div>
+            <div class="level bottom-level">
+                <a href="" class="corner bottom-left-col animate">
+                    <div class="animate-flip">
+                        <img src="infra.png" alt="">
+                        <p>Infrastructure</p>
+                    </div>
+                    <p class="more-info">more info</p>
+                </a>
+                <a href="" class="corner bottom-center-col animate">
+                    <div class="animate-flip">
+                        <img src="internet.jpg" alt="">
+                        <p>Internet/Dark Web</p>
+                    </div>
+                    <p class="more-info">more info</p>
+                </a>
+                <a href="" class="corner bottom-right-col w-sm animate">
+                    <div class="animate-flip">
+                        <img src="mobile.png" alt="">
+                        <p>Mobile Devices</p>
+                    </div>
+                    <p class="more-info">more info</p>
+                </a>
+            </div>
+        </div>
+        <div class="navigation-icon">
+            <a href="" class="pre-circle-btn">
+                <img src="https://i.imgur.com/FOnKtub.png" alt="">
+            </a>
+            <a href="" class="next-circle-btn">
+                <img src="https://i.imgur.com/7ctmnhN.png" alt="">
+            </a>
+        </div>
+        <div class="circle-footer">
+            <img src="https://i.imgur.com/ekEBert.png" alt="">
+            <h2>360° CYBERSECURITY</h2>
+            <p><span>ECHELON</span> TECHNOLOGIES</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

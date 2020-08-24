@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<style type="text/css">@charset "utf-8";
+/* CSS Document */
+*{box-sizing: border-box;-webkit-box-sizing: border-box;}
+body{margin:0; padding:0; outline:0; margin:0; font-family: 'Arial',sans-serif; font-size:.9em; color:#444; background:#f3f3f3;}
+ul{ list-style:none; margin:0; padding:0;}
+.animate{
+    perspective: 1000px;
+}
+
+.more-info {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out ;
+    -webkit-transition: all 0.4s ease-in-out;  
+    top: 42px;
+    position: absolute;
+    left: 275px;
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+}
+.animate .animate-flip {
+    transition: all 0.4s ease-in-out ;
+    -webkit-transition: all 0.4s ease-in-out;  
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+}
+.animate:hover .animate-flip {
+    transition: all 0.4s ease-in-out ;
+    -webkit-transition: all 0.4s ease-in-out;  
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    opacity: 0;
+}
+.animate:hover .more-info{
+    visibility: visible;
+    transition: all 0.4s ease-in-out ;
+    -webkit-transition: all 0.4s ease-in-out;  
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    opacity: 1;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clearfix {
+    display: inline-block;
+}
+.clear{ clear:both;}
+html[xmlns] .clearfix {
+    display: block;
+}
+* html .clearfix {
+    height: 1%;
+}
+a{ text-decoration:none;}
+
+h2{ font-size:32px; margin:0; text-transform:uppercase; color:#227FAD; line-height:30px; font-weight:normal;}
+h2 .bigFont{ font-size:57px;}
+.green-txt{ color:#628d2b;}
+
+
+ul.nav-circle li{ text-align:center; width:77px; display:inline-block; text-transform:uppercase; position:absolute; }
+ul.nav-circle li.uiLayout{ background:url(https://i.imgur.com/pnfecdZ.png) center top no-repeat;left: 248px;top: 15px; height:46px;}
+ul.nav-circle li.uiLayout a{ padding: 48px 0 0; color:#9146af;}
+ul.nav-circle li.css3{ background:url(https://i.imgur.com/uomi0Cn.png) center top no-repeat;left: 401px;top: 82px; height:46px;}
+ul.nav-circle li.css3 a{ padding: 48px 0 0; color:#e84c3f;}
+ul.nav-circle li.blog{ background:url(https://i.imgur.com/pnfecdZ.png) center top no-repeat;left:474px;top:208px; height:46px;}
+ul.nav-circle li.blog a{padding: 48px 0 0; color:#2b80b9;}
+ul.nav-circle li.art{ background:url(https://i.imgur.com/pnfecdZ.png) center top no-repeat;left:447px;top:375px; height:46px;}
+ul.nav-circle li.art a{padding: 48px 0 0; color:#9146af;}
+ul.nav-circle li.logos{ background:url(https://i.imgur.com/pnfecdZ.png) center top no-repeat;left: 248px;top:489px; height:46px;}
+ul.nav-circle li.logos a{ padding: 48px 0 0; color:#9146af;}
+ul.nav-circle li.Stories{ background:url(https://i.imgur.com/pnfecdZ.png) center top no-repeat;left: 41px;top:375px; height:46px;}
+ul.nav-circle li.Stories a{ padding: 48px 0 0; color:#9146af;}
+ul.nav-circle li.tutorial{ background:url(https://i.imgur.com/AE8BVWG.png) center top no-repeat;left: 12px;top: 208px; height:46px;}
+ul.nav-circle li.tutorial a{padding: 48px 0 0; color:#2b80b9;}
+ul.nav-circle li.html5{ background:url(https://i.imgur.com/QI4i1nt.png) center top no-repeat;left:78px;top: 82px; height:46px;}
+ul.nav-circle li.html5 a{ padding: 48px 0 0; color:#628d2b;}
+ul.nav-circle li a{ display:inline-block;}
+
+
+
+
+.circle-head {background: url(https://i.imgur.com/ekEBert.png) center top no-repeat; bottom:-39px;display: block;
+    height:220px;left: 0; margin-left: -198px;position: absolute;width: 965px;z-index: 9; padding-top:126px;}
+.circle-head-inner{ padding:16px 0 0; background:#f3f3f3; min-height:165px; text-align:center;}
+.circle-btns {bottom: 190px; left:6px;display: block; position: absolute; width: 554px;z-index: 99;}
+.circle-btns .pre-circle-btn{ background:url(https://i.imgur.com/FOnKtub.png) left top no-repeat; width:99px; height:57px; display:block; text-indent:-999px; font-size:0; float:left;margin-top: 0px;}
+.circle-btns .next-circle-btn{ background:url(https://i.imgur.com/7ctmnhN.png) left top no-repeat; width:99px; height:59px; display:block; text-indent:-999px; font-size:0; float:right;margin-top: -3px;}
+
+
+
+.home-nav{ background:url(your.png) center top no-repeat; width:585px; height:783px; display:block; margin:85px auto 0;position:relative;}
+.nav-circle{width:565px; height:565px;}
+.nav-circle .uiLayout{ background:url(fire.png) center top no-repeat;top: 15px; position:absolute;left:255px;}
+.nav-circle .uiLayout a{ padding: 48px 0 0; color:#9146af;position:relative;}
+.nav-circle a{ display:inline-block;}
+.first_circle {position:absolute;height: 565px;width: 565px;}
+.nav-circle .css3{ background:url(email.png) center top no-repeat; top: 105px;left: 440px;width: 45px;position:absolute;}
+.nav-circle .css3 a{ padding: 48px 12px 0; color:#e84c3f;position:relative;margin-left: 16px;
+}
+.second_circle {position:absolute;height: 565px;width: 565px;}
+.nav-circle .blog{ background:url(training.png) center top no-repeat;top: 250px;left: 490px;width: 45px;position:absolute;}
+.nav-circle .blog a{padding: 48px 12px 0; color:#2b80b9;position:relative;}
+.third_circle, .fourth_circle, .fifth_circle, .sixth_circle, .seventh_circle, .eighted_circle {position:absolute;height: 565px;width: 565px;}
+.nav-circle .art{ background:url(mobile.png) center top no-repeat;top: 410px;left: 435px;width: 45px;position:absolute;}
+.nav-circle .art a{padding: 48px 15px 0;
+    color: #628d2b;
+    position: relative;
+    width: 200px;
+    margin-left: -42px;}
+.nav-circle .logos{ background:url(internet.jpg) center top no-repeat;top: 490px;left: 255px;width: 45px;position:absolute;}
+.nav-circle .logos a {
+    padding: 48px 10px 0;
+    color: #9146af;
+    position: relative;
+    width: 200px;
+    margin-left: -34px;
+}
+.nav-circle .Stories{ background:url(infra.png) center top no-repeat;top: 410px;left: 85px;width: 45px;position:absolute;}
+.nav-circle .Stories a{ padding: 48px 5px 0; color:#e84c3f;position:relative;}
+.nav-circle .tutorial{ background:url(backup.png) center top no-repeat;top: 250px;left: 25px;width: 45px;position:absolute;}
+.nav-circle .tutorial a{padding: 48px 5px 0; color:#2b80b9;position:relative;}
+.nav-circle .html5{ background:url(human.png) center top no-repeat;top: 105px;left: 75px;width: 45px;position:absolute;}
+.nav-circle .html5 a{ padding: 48px 5px 0; color:#628d2b;position:relative;margin-left:-15px;}
+
+
+
+@media (max-width:768px){
+    .nav-circle .m-bg-none{
+        background: none;
+    }
+    .nav-circle .uiLayout {
+        left: 210px;
+    }
+    .nav-circle a {
+    font-size: 1.6em;
+    }
+    .circle-head {
+        width: 100%;
+        margin-left: 0;
+        bottom: 178px;
+        background-size: cover;
+        height: 0px;
+    }
+    .home-nav {
+        margin: 138px auto 0;
+    }
+    .circle-head-inner h2 {
+        font-size: 22px;
+    }
+    .nav-circle {
+    width: 100%; }
+
+    h2 .bigFont {
+    font-size: 30px;}
+    .nav-circle .blog a {
+    padding: 48px 0px 0;}
+    .nav-circle .logos a{
+        padding: 22px 0px 0;    margin-left: -45px;
+    }
+    .nav-circle .uiLayout a {
+    padding: 24px 0 0;}
+    .nav-circle .html5 a {
+        margin-left: -40px;
+    }
+    .more-info {
+        display: none;
+    }
+    .animate .animate-flip {
+
+    }
+    .animate:hover .more-info{
+        display: none;
+    }
+    .animate:hover .animate-flip {
+    transition: all 0.4s ease-in-out ;
+    -webkit-transition: all 0.4s ease-in-out;  
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    opacity: 1;
+}
+}
+</style>
+
+</head>
+<body>
+
+  <div class="home-nav clear">
+
+         <div class="nav-circle" id="nav-circle">
+      <div class="animate">
+
+        <div class="uiLayout m-bg-none animate-flip" ><a href="#" class="p-text">Firwall Protection</a></div><a href="#" class="more-info">More Info</a>
+      </div>
+
+      <div class="animate">
+        <div class="css3 m-bg-none animate-flip"><a href="#" class="p-text">Email Protection</a></div><a href="#" class="more-info">More Info</a>
+      </div>
+      <div class="animate">
+        <div class="blog m-bg-none animate-flip"><a href="#" class="p-text">Training</a></div><a href="#" class="more-info">More Info</a>
+    </div>
+    <div class="animate">
+        <div class="art m-bg-none animate-flip"><a href="#" class="p-text">Mobile Devices</a></div><a href="#" class="more-info">More Info</a>
+    </div>
+    <div class="animate">
+        <div class="art m-bg-none animate-flip"><a href="#" class="p-text">Mobile Devices</a></div><a href="#" class="more-info">More Info</a>
+    </div>
+    <div class="animate">
+        <div class="logos m-bg-none animate-flip"><a href="#" class="p-text">Internet/ Dark Web</a></div><a href="#" class="more-info">More Info</a>
+    </div>
+    <div class="animate">
+        <div class="Stories m-bg-none animate-flip"><a href="#" class="p-text">Infrastructure</a></div><a href="#" class="more-info">More Info</a>
+    </div>
+    <div class="animate">
+        <div class="tutorial m-bg-none animate-flip"><a href="#" class="p-text">Backup Recovery</a></div><a href="#" class="more-info">More Info</a>
+    </div>
+         <div class="animate">
+            <div class="html5 m-bg-none animate-flip" id="html5"><a href="#" class="p-text">Human Firewalls</a></div><a href="#" class="more-info">More Info</a>
+         </div>
+      
+
+      
+      
+         
+      
+      
+      
+         
+      
+      
+      
+         
+      
+      
+      
+         
+      
+      
+      
+         
+      
+      
+      
+         
+      
+      
+      
+
+
+         
+   </div>
+
+   
+   <div class="circle-btns">
+    <a class="pre-circle-btn" href="javascript:void(0)">previous</a>
+    <a class="next-circle-btn" href="javascript:void(0)">next</a>
+    </div>
+    <div class="circle-head"><div class="circle-head-inner"><h2><span class="bigFont">360° Cybersecurity </span><br /><span class="green-txt">Echelon</span> technologies</h2></div></div>
+   </div>
+
+
+
+
+</body>
+
+</html>
